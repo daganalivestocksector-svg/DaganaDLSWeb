@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trailnote – Plan hikes with your friends</title>
+  <meta name="description" content="Trailnote helps groups plan hikes, share routes and track gear in one place.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="#top">Trailnote</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav id="menu">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn small" href="#signup">Join the waitlist</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Plan the hike. Not the group chat.</h1>
+        <p>Trailnote keeps routes, gear lists and meeting points for your group in one shared page.</p>
+        <div class="actions">
+          <a class="btn" href="#signup">Join the waitlist</a>
+          <a class="btn ghost" href="#features">See features</a>
+        </div>
+      </div>
+      <svg class="hero-art" viewBox="0 0 400 300" aria-hidden="true">
+        <circle cx="300" cy="70" r="36" fill="#f2b84b"/>
+        <path d="M0 300 L110 110 L180 200 L250 90 L400 300Z" fill="#2f5d50"/>
+        <path d="M110 110 L90 142 L110 134 L128 146Z M250 90 L228 126 L250 118 L270 130Z" fill="#f4efe6"/>
+        <path d="M0 300 L140 190 L230 300Z" fill="#1d3a31"/>
+        <path id="trail" d="M60 290 C120 250 170 270 210 230 S 260 170 250 120" fill="none" stroke="#f2b84b" stroke-width="4" stroke-dasharray="8 8" stroke-linecap="round"/>
+      </svg>
+    </section>
+
+    <section id="features" class="section">
+      <h2>Everything your group needs</h2>
+      <div class="grid">
+        <article><h3>Shared routes</h3><p>Add a trail link or GPX file and everyone sees the distance, climb and estimated time.</p></article>
+        <article><h3>Gear lists</h3><p>Claim items like the stove or first-aid kit so nothing is packed twice or forgotten.</p></article>
+        <article><h3>Meeting points</h3><p>Pin the car park and start time. Members get a reminder the evening before.</p></article>
+      </div>
+    </section>
+
+    <section id="how" class="section alt">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><strong>Create a trip.</strong> Pick a date and add a route.</li>
+        <li><strong>Invite your group.</strong> Share one link. No account needed to view.</li>
+        <li><strong>Hike.</strong> Open the trip page offline on the trail.</li>
+      </ol>
+    </section>
+
+    <section id="faq" class="section">
+      <h2>Questions</h2>
+      <details><summary>Is Trailnote free?</summary><p>Yes during the beta. Paid plans for large groups may come later.</p></details>
+      <details><summary>Does it work offline?</summary><p>Trip pages you have opened can be read without a signal.</p></details>
+      <details><summary>Which devices are supported?</summary><p>Any modern phone or desktop browser.</p></details>
+    </section>
+
+    <section id="signup" class="section alt">
+      <h2>Get early access</h2>
+      <p>Leave your email and we will message you when the beta opens.</p>
+      <form id="signupForm" novalidate>
+        <label for="email" class="sr">Email address</label>
+        <input id="email" type="email" placeholder="you@example.com" required autocomplete="email">
+        <button class="btn" type="submit">Join the waitlist</button>
+      </form>
+      <p id="formMsg" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Trailnote. Made for people who like mud.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
